@@ -131,3 +131,16 @@ WHERE (e.hire_date BETWEEN '1985-01-01' AND '1995-12-31') AND (e.birth_date NOT 
 ORDER BY e.emp_no;
 
 -- Queries will be used in the summary
+
+-- Run to see the titles that are retiring
+SELECT COUNT(title), title FROM retirement_titles GROUP BY title ORDER BY count DESC
+
+-- Run to see those eligible for the mentorship program 
+SELECT COUNT(emp_no), emp_no FROM mentorship_eligibility GROUP BY emp_no;
+
+-- Run to see how many roles will need to be filled during this "silver tsunami"
+SELECT DISTINCT ON (last_name) last_name FROM retirement_titles;
+
+-- Run to see how many employees will need to be replaced/hired after these employees retire out
+SELECT COUNT(emp_no), emp_no FROM mentorship_eligibility GROUP BY emp_no;
+
