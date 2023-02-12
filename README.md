@@ -1,4 +1,4 @@
-# Pewlett-Hackard-Analysis_SQL
+# Pewlett-Hackard-Analysis
 
 # Overview of the analysis:
 
